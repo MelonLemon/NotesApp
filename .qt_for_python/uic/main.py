@@ -199,7 +199,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 80, 87))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 398, 439))
         self.scrollAreaWidgetContents.setStyleSheet(u"border: 0px;\n"
 "border-radius: 15px;")
         self.gridLayout_3 = QGridLayout(self.scrollAreaWidgetContents)
@@ -334,17 +334,22 @@ class Ui_MainWindow(object):
 
         self.textEdit_bodyNote = QTextEdit(self.notePage)
         self.textEdit_bodyNote.setObjectName(u"textEdit_bodyNote")
+        font3 = QFont()
+        font3.setFamilies([u"Segoe UI Semibold"])
+        font3.setPointSize(10)
+        font3.setBold(True)
+        self.textEdit_bodyNote.setFont(font3)
 
         self.verticalLayout_2.addWidget(self.textEdit_bodyNote)
 
         self.btn_delete = QPushButton(self.notePage)
         self.btn_delete.setObjectName(u"btn_delete")
         self.btn_delete.setMinimumSize(QSize(65, 30))
-        font3 = QFont()
-        font3.setFamilies([u"Segoe UI Semibold"])
-        font3.setPointSize(11)
-        font3.setBold(True)
-        self.btn_delete.setFont(font3)
+        font4 = QFont()
+        font4.setFamilies([u"Segoe UI Semibold"])
+        font4.setPointSize(11)
+        font4.setBold(True)
+        self.btn_delete.setFont(font4)
         self.btn_delete.setStyleSheet(u"")
 
         self.verticalLayout_2.addWidget(self.btn_delete, 0, Qt.AlignRight)
@@ -375,7 +380,7 @@ class Ui_MainWindow(object):
         self.btn_save = QPushButton(self.header_notes_2)
         self.btn_save.setObjectName(u"btn_save")
         self.btn_save.setMinimumSize(QSize(55, 30))
-        self.btn_save.setFont(font3)
+        self.btn_save.setFont(font4)
         self.btn_save.setStyleSheet(u"")
 
         self.horizontalLayout_3.addWidget(self.btn_save, 0, Qt.AlignRight)
@@ -392,6 +397,7 @@ class Ui_MainWindow(object):
 
         self.textEdit_bodyNote_2 = QTextEdit(self.addNotePage)
         self.textEdit_bodyNote_2.setObjectName(u"textEdit_bodyNote_2")
+        self.textEdit_bodyNote_2.setFont(font3)
 
         self.verticalLayout_3.addWidget(self.textEdit_bodyNote_2)
 
@@ -408,7 +414,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
