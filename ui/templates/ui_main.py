@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainTuscyU.ui'
+## Form generated from reading UI file 'mainVlwFrH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.2
 ##
@@ -203,7 +203,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 398, 439))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 80, 87))
         self.scrollAreaWidgetContents.setStyleSheet(u"border: 0px;\n"
 "border-radius: 15px;")
         self.gridLayout_3 = QGridLayout(self.scrollAreaWidgetContents)
@@ -256,6 +256,7 @@ class Ui_MainWindow(object):
         self.notePage.setObjectName(u"notePage")
         self.verticalLayout_2 = QVBoxLayout(self.notePage)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(18, -1, -1, -1)
         self.header_notes = QFrame(self.notePage)
         self.header_notes.setObjectName(u"header_notes")
         sizePolicy.setHeightForWidth(self.header_notes.sizePolicy().hasHeightForWidth())
@@ -266,7 +267,7 @@ class Ui_MainWindow(object):
         self.header_notes.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.header_notes)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(9, 0, -1, 0)
+        self.horizontalLayout_2.setContentsMargins(0, 0, -1, 0)
         self.btn_back = QPushButton(self.header_notes)
         self.btn_back.setObjectName(u"btn_back")
         self.btn_back.setMinimumSize(QSize(27, 27))
@@ -413,7 +414,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
