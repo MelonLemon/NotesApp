@@ -1,6 +1,6 @@
 # NotesApp
 Basic Notes App with cardview and changing size/number cards within resizing
-This NotesApp based on design by Amal "A simple and lightweight note app"
+This NotesApp based on design by Amal ["A simple and lightweight note app"](https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app/attachments/3501130?mode=media)
 
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot1.PNG)
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot2.PNG)
