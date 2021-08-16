@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="137.58333mm"
+   height="130.77977mm"
+   viewBox="0 0 137.58333 130.77977"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="260.00001"
+     inkscape:cy="280.00005"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1500"
+     inkscape:window-height="1009"
+     inkscape:window-x="164"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-37.041664,-74.083321)">
+    <ellipse
+       style="fill:#f2bcc9;fill-opacity:1;stroke-width:3.03584;stroke-linejoin:round"
+       id="path833"
+       cx="105.83333"
+       cy="139.47321"
+       rx="68.791664"
+       ry="65.389885" />
+    <ellipse
+       style="fill:#e9e9e9;stroke-width:2.5;stroke-linejoin:round"
+       id="path835"
+       cx="184.83035"
+       cy="199.57143"
+       rx="10.205358"
+       ry="0.75595242" />
+    <g
+       id="g886"
+       transform="matrix(1.1391233,0,0,1.0671995,53.13551,83.378518)"
+       inkscape:transform-center-x="-117.16697"
+       inkscape:transform-center-y="3.0491449"
+       style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195">
+      <g
+         id="g845"
+         style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195">
+        <g
+           id="g843"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195">
+          <g
+             id="g839"
+             style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195">
+            <g
+               id="g837"
+               style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+          </g>
+          <g
+             id="g841"
+             style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        </g>
+      </g>
+      <g
+         id="g863"
+         style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195">
+        <rect
+           fill="#231f20"
+           height="2"
+           width="28"
+           x="34"
+           y="41"
+           id="rect847"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <circle
+           cx="28.202"
+           cy="42"
+           fill="#231f20"
+           r="2"
+           id="circle849"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <rect
+           fill="#231f20"
+           height="2"
+           width="28"
+           x="34"
+           y="51"
+           id="rect851"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <circle
+           cx="28.202"
+           cy="52"
+           fill="#231f20"
+           r="2"
+           id="circle853"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <circle
+           cx="28.202"
+           cy="62"
+           fill="#231f20"
+           r="2"
+           id="circle855"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <rect
+           fill="#231f20"
+           height="2"
+           width="16"
+           x="34"
+           y="71"
+           id="rect857"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <circle
+           cx="28.202"
+           cy="72"
+           fill="#231f20"
+           r="2"
+           id="circle859"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+        <path
+           d="M 91.796,36.109 88.968,33.281 87.2,35.049 86.493,34.342 83.738,36.993 74,46.63 V 30 C 74,23.383 68.821,18 62.204,18 H 61 v -1 c 0,-1.1 -0.696,-2 -1.796,-2 h -11 c 0,-2.209 -1.791,-4 -4,-4 -2.209,0 -4,1.791 -4,4 h -11 C 28.104,15 27,15.9 27,17 v 1 H 26.204 C 19.587,18 14,23.383 14,30 v 50 c 0,6.617 5.587,12 12.204,12 h 36 C 68.821,92 74,86.617 74,80 V 55.114 L 87.098,42 h 0.051 l 3.562,-3.476 -0.695,-0.678 z M 44.204,13 c 1.104,0 2,0.896 2,2 0,1.104 -0.896,2 -2,2 -1.104,0 -2,-0.896 -2,-2 0,-1.104 0.896,-2 2,-2 z M 70,80 c 0,4.411 -3.385,8 -7.796,8 h -36 C 21.793,88 18,84.411 18,80 V 30 c 0,-4.411 3.793,-8 8.204,-8 h 1 l -1,4 c 0,1.1 0.9,2 2,2 h 32 c 1.1,0 2,-0.9 2,-2 l -1,-4 h 1 C 66.615,22 70,25.589 70,30 V 50.63 L 59.835,61 H 34 v 2 h 23.835 l -2.278,2.278 -1.768,3.889 H 53.788 L 52.02,73.057 59.697,69.52 70,59.114 Z m -11.767,-10.631 -2.916,1.326 -0.936,-0.935 1.326,-2.917 2.324,2.323 z M 87.376,40.528 84.548,37.7 l 1.794,-1.793 -0.202,0.202 2.827,2.827 0.354,-0.354 0.001,10e-4 z"
+           fill="#231f20"
+           id="path861"
+           style="fill:#fadd5f;fill-opacity:0.993507;stroke:#fadd52;stroke-opacity:0.805195" />
+      </g>
+    </g>
+  </g>
+</svg>

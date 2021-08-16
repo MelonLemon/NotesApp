@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="svg">
+    <file>checkYes_icon.svg</file>
+    <file>checkYesDisabled_icon.svg</file>
+    <file>plus_icon.svg</file>
+    <file>notes_icon.svg</file>
+    <file>logo.svg</file>
+    <file>edit_icon.svg</file>
+    <file>back_arrow_icon.svg</file>
+    <file>search_icon.svg</file>
+  </qresource>
+</RCC>

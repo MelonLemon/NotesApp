@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>406</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>350</width>
+    <height>270</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(37, 37, 37);
+color: rgb(248, 248, 248);
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QPushButton#btn_delete, #btn_search, #btn_back,
+ #btn_saveChanges, #btn_edit, #btn_back_2, #btn_save {
+   background-color: rgb(58, 58, 58);
+   border: 0px;
+   border-radius: 5px;
+}
+
+QPushButton#btn_delete:hover {
+	border: 1px solid rgb(255, 70, 95);
+}
+QPushButton#btn_delete:pressed {
+   background-color: rgb(255, 70, 95);
+   border: 0px;
+   border-radius: 5px;
+}
+
+QPushButton#btn_add {
+background-color: rgb(48, 48, 48);
+border-radius: 20px;
+}
+
+QPushButton#btn_add:hover, #btn_back:hover, 
+#btn_edit:hover, #btn_back_2:hover, #btn_save:hover {
+	border: 3px solid rgb(33, 33, 33);
+}
+QPushButton#btn_add:pressed, #btn_back:hover, 
+#btn_edit:hover, #btn_back_2:hover, #btn_save:hover {
+   background-color: rgb(33, 33, 33);
+}
+
+QTextEdit#textEdit_bodyNote, #lineEdit_Title {
+border: 0xp;
+}
+
+QPushButton#btn_saveChanges:hover {
+	border: 1px solid rgb(231, 237, 155);
+}
+QPushButton#btn_saveChanges:pressed {
+   background-color: rgb(207, 212, 144);
+   border: 1px solid rgb(207, 212, 144);
+}
+
+QTableView {
+	background-color: rgb(37, 37, 37);
+    border: 0xp;
+}
+QScrollArea {
+	background-color: rgb(37, 37, 37);
+    border: 0xp;
+}
+
+QScrollBar:vertical {
+    border: none;
+     background: rgb(37, 37, 37);
+     width: 20px;
+     margin: 19px 0 19px 0;
+     border-radius: 0px;
+ }
+
+QScrollBar::handle:vertical {
+    background-color:  rgb(48, 48, 48);
+    min-height: 30px;
+    border-radius: 5px;
+  }
+
+QScrollBar::handle:vertical:hover {
+      background-color: rgb(255,255,222);
+  }
+
+QScrollBar::handle:vertical:pressed {
+      background-color: rgb(33, 33, 33);
+ }
+
+QScrollBar::sub-line:vertical {
+      height: 0px;
+ }
+
+ QScrollBar::add-line:vertical {
+       height: 0px;
+ }
+
+
+
+/* RESET ARROW  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv       */
+            QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+                background: none;
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;
+            }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^       *</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="allNotesPage">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>3</number>
+        </property>
+        <property name="bottomMargin">
+         <number>3</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="header_allNotes">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_Notes">
+             <property name="font">
+              <font>
+               <family>Segoe UI Symbol</family>
+               <pointsize>14</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 14pt &quot;Segoe UI Symbol&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Notes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_search">
+             <property name="styleSheet">
+              <string notr="true">border: 1px solid rgb(233, 233, 233);
+border-top-color: rgb(37, 37, 37);
+border-right-color: rgb(37, 37, 37);
+border-left-color: rgb(37, 37, 37);
+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_search">
+             <property name="minimumSize">
+              <size>
+               <width>27</width>
+               <height>27</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/search_icon.svg</normaloff>:/svg/search_icon.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="allNotes">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>398</width>
+                <height>439</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border: 0px;
+border-radius: 15px;</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QTableView" name="tableView">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="dragEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="textElideMode">
+                  <enum>Qt::ElideLeft</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>46</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-radius: 20px;
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="leftMargin">
+            <number>3</number>
+           </property>
+           <property name="topMargin">
+            <number>3</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
+           <property name="bottomMargin">
+            <number>3</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btn_add">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/plus_icon.svg</normaloff>:/svg/plus_icon.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>18</width>
+               <height>18</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="notePage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="header_notes">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>9</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QPushButton" name="btn_back">
+             <property name="minimumSize">
+              <size>
+               <width>27</width>
+               <height>27</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/back_arrow_icon.svg</normaloff>:/svg/back_arrow_icon.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QFrame" name="btns_forEdit">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btn_saveChanges">
+                <property name="minimumSize">
+                 <size>
+                  <width>27</width>
+                  <height>27</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../res/icons_svg.qrc">
+                  <normaloff>:/svg/checkYesDisabled_icon.svg</normaloff>:/svg/checkYesDisabled_icon.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_edit">
+                <property name="minimumSize">
+                 <size>
+                  <width>27</width>
+                  <height>27</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../res/icons_svg.qrc">
+                  <normaloff>:/svg/edit_icon.svg</normaloff>:/svg/edit_icon.svg</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_Title">
+          <property name="font">
+           <font>
+            <family>Segoe UI Semibold</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(253, 253, 253);</string>
+          </property>
+          <property name="placeholderText">
+           <string>Title</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_date">
+          <property name="font">
+           <font>
+            <family>Segoe UI Symbol</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(106, 106, 106);</string>
+          </property>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_dateUpdate">
+          <property name="text">
+           <string>Last update: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_bodyNote"/>
+        </item>
+        <item alignment="Qt::AlignRight">
+         <widget class="QPushButton" name="btn_delete">
+          <property name="minimumSize">
+           <size>
+            <width>65</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI Semibold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>DELETE</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="addNotePage">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QFrame" name="header_notes_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>45</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item alignment="Qt::AlignLeft">
+            <widget class="QPushButton" name="btn_back_2">
+             <property name="minimumSize">
+              <size>
+               <width>27</width>
+               <height>27</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/back_arrow_icon.svg</normaloff>:/svg/back_arrow_icon.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QPushButton" name="btn_save">
+             <property name="minimumSize">
+              <size>
+               <width>55</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI Semibold</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_Title_2">
+          <property name="font">
+           <font>
+            <family>Segoe UI Semibold</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(253, 253, 253);</string>
+          </property>
+          <property name="placeholderText">
+           <string>Title</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_bodyNote_2"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>10</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>10</height>
+    </size>
+   </property>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Новый  список</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../res/icons_svg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
