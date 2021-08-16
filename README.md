@@ -12,6 +12,7 @@ Display of notes are similar to flatlist. CardViewModel display only limit numbe
 Notes are resizing with resizing the window. Width of note grows till you can put another note with minimum width. I limit notes display 8 notes in a row(8 columns).
 
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot4.PNG)
-
+![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot6.PNG)
 It has a "search" where it shows notes that has text in search box.  
+![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot5.PNG)
 
