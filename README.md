@@ -1,4 +1,4 @@
-# NotesApp
+# Notys
 Basic Notes App with cardview and changing size/number cards within resizing window.
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShotFull.png)
 
