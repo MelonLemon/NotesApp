@@ -1,5 +1,6 @@
-# NotesApp
+# Notys
 Basic Notes App with cardview and changing size/number cards within resizing window.
+![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShotFull.png)
 
 This NotesApp heavily based on design by Amal ["A simple and lightweight note app"](https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app/attachments/3501130?mode=media)
 I re-design it, couldn't contact to Amal, don't know if that can be problem. If it is, I can redesign app completely as the main focus here was to build App with cardview and changing size/number cards within resizing window.
