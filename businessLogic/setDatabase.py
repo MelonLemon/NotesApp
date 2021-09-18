@@ -8,5 +8,5 @@ def setMainTables():
     databaseModel.create_tables(connection)
 
 
-# setMainTables()
+setMainTables()
 

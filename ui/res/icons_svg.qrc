@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="svg">
+    <file>calendar_white_icon.svg</file>
     <file>checkYes_icon.svg</file>
     <file>checkYesDisabled_icon.svg</file>
     <file>plus_icon.svg</file>

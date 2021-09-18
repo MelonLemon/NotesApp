@@ -7,11 +7,13 @@ CREATE TABLE IF NOT EXISTS notes (
     title text,
     dateCreate timestamp, 
     dateUpdate timestamp, 
-    body text
+    body text,
+    dateTask timestamp,
+    timer integer
 );
 """
 
-INSERT_NOTE         = "INSERT INTO notes (title, dateCreate, dateUpdate, body) VALUES (?,?,?,?)"
+INSERT_NOTE         = "INSERT INTO notes (title, dateCreate, dateUpdate, body, dateTask, timer) VALUES (?,?,?,?)"
 
 GET_ALL_NOTES       = "SELECT * FROM notes"
 
@@ -30,7 +32,7 @@ GET_ALL_NOTESBYID   = "SELECT * FROM notes WHERE id = ?"
 DELETE_NOTES        = "DELETE FROM notes WHERE id = ?"
 
 UPDATE_NOTE         = "UPDATE notes SET title = ?, body = ?, dateUpdate = ? WHERE id = ?"
-
+UPDATE_TASK         = "UPDATE notes SET title = ?, body = ?, dateUpdate = ?, dateTask = ?, timer = ? WHERE id = ?"
 
 def connect():
     return sqlite3.connect("notes.db")
@@ -39,9 +41,9 @@ def create_tables(connection):
     with connection:
          connection.execute(CREATE_NOTES_TABLE)
 
-def add_note(connection, title, dateCreate, dateUpdate, body):
+def add_note(connection, title, dateCreate, dateUpdate, body, dateTask, timer):
     with connection:
-        connection.execute(INSERT_NOTE, (title, dateCreate, dateUpdate, body))
+        connection.execute(INSERT_NOTE, (title, dateCreate, dateUpdate, body, dateTask, timer))
 
 def get_all_notes(connection):
     with connection:
@@ -62,4 +64,9 @@ def delete_notes(connection, id):
 def update_note(connection, title, body, dateUpdate, id):
     with connection:
         return connection.execute(UPDATE_NOTE, (title, body, dateUpdate,id))
+
+def update_task(connection, title, body, dateUpdate, dateTask, timer, id):
+    with connection:
+        return connection.execute(UPDATE_TASK, (title, body, dateUpdate, dateTask, timer, id))
+
 

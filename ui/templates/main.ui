@@ -28,16 +28,16 @@ color: rgb(248, 248, 248);
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">QPushButton#btn_delete, #btn_search, #btn_back,
- #btn_saveChanges, #btn_edit, #btn_back_2, #btn_save {
+ #btn_saveChanges, #btn_edit, #btn_back_2, #btn_save, #btn_addTask, #btn_calendar, #btn_back_3, #delete_all_tasks {
    background-color: rgb(58, 58, 58);
    border: 0px;
    border-radius: 5px;
 }
 
-QPushButton#btn_delete:hover {
+QPushButton#btn_delete:hover, #delete_all_tasks:hover {
 	border: 1px solid rgb(255, 70, 95);
 }
-QPushButton#btn_delete:pressed {
+QPushButton#btn_delete:pressed, #delete_all_tasks:pressed {
    background-color: rgb(255, 70, 95);
    border: 0px;
    border-radius: 5px;
@@ -49,7 +49,7 @@ border-radius: 20px;
 }
 
 QPushButton#btn_add:hover, #btn_back:hover, 
-#btn_edit:hover, #btn_back_2:hover, #btn_save:hover {
+#btn_edit:hover, #btn_back_2:hover, #btn_save:hove {
 	border: 3px solid rgb(33, 33, 33);
 }
 QPushButton#btn_add:pressed, #btn_back:hover, 
@@ -61,10 +61,10 @@ QTextEdit#textEdit_bodyNote, #lineEdit_Title {
 border: 0xp;
 }
 
-QPushButton#btn_saveChanges:hover {
+QPushButton#btn_saveChanges:hover, #btn_addTask:hover, #btn_calendar:hover, #btn_back_3:hover {
 	border: 1px solid rgb(231, 237, 155);
 }
-QPushButton#btn_saveChanges:pressed {
+QPushButton#btn_saveChanges:pressed, #btn_addTask:pressed, #btn_calendar:pressed,  #btn_back_3:pressed {
    background-color: rgb(207, 212, 144);
    border: 1px solid rgb(207, 212, 144);
 }
@@ -137,8 +137,14 @@ QScrollBar::sub-line:vertical {
     </property>
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="allNotesPage">
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -243,6 +249,23 @@ border-left-color: rgb(37, 37, 37);
              <property name="icon">
               <iconset resource="../res/icons_svg.qrc">
                <normaloff>:/svg/search_icon.svg</normaloff>:/svg/search_icon.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_calendar">
+             <property name="minimumSize">
+              <size>
+               <width>27</width>
+               <height>27</height>
+              </size>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/calendar_white_icon.svg</normaloff>:/svg/calendar_white_icon.svg</iconset>
              </property>
             </widget>
            </item>
@@ -569,6 +592,51 @@ border-radius: 15px;</string>
           </property>
          </widget>
         </item>
+        <item alignment="Qt::AlignLeft">
+         <widget class="QFrame" name="task">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="leftMargin">
+            <number>1</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_task">
+             <property name="text">
+              <string>Task</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="dateEdit">
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2021</year>
+               <month>1</month>
+               <day>1</day>
+              </datetime>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
         <item>
          <widget class="QTextEdit" name="textEdit_bodyNote">
           <property name="font">
@@ -711,6 +779,212 @@ border-radius: 15px;</string>
             <bold>true</bold>
            </font>
           </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignLeft">
+         <widget class="QFrame" name="frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_task_2">
+             <property name="text">
+              <string>Task</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDateEdit" name="dateEdit_2">
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2021</year>
+               <month>1</month>
+               <day>1</day>
+              </datetime>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="calendarPage">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QFrame" name="calendar">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QCalendarWidget" name="calendarWidget"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="add_task">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QTextEdit" name="textEdit"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_addTask">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../res/icons_svg.qrc">
+               <normaloff>:/svg/checkYes_icon.svg</normaloff>:/svg/checkYes_icon.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>25</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="allTasks">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QTableView" name="tableview_tasks"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="parameters">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <property name="topMargin">
+            <number>1</number>
+           </property>
+           <property name="bottomMargin">
+            <number>1</number>
+           </property>
+           <item alignment="Qt::AlignLeft">
+            <widget class="QPushButton" name="delete_all_tasks">
+             <property name="minimumSize">
+              <size>
+               <width>65</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>DELETE</string>
+             </property>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QPushButton" name="btn_back_3">
+             <property name="minimumSize">
+              <size>
+               <width>65</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>BACK</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>

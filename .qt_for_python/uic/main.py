@@ -33,16 +33,16 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"QPushButton#btn_delete, #btn_search, #btn_back,\n"
-" #btn_saveChanges, #btn_edit, #btn_back_2, #btn_save {\n"
+" #btn_saveChanges, #btn_edit, #btn_back_2, #btn_save, #btn_addTask, #btn_calendar, #btn_back_3, #delete_all_tasks {\n"
 "   background-color: rgb(58, 58, 58);\n"
 "   border: 0px;\n"
 "   border-radius: 5px;\n"
 "}\n"
 "\n"
-"QPushButton#btn_delete:hover {\n"
+"QPushButton#btn_delete:hover, #delete_all_tasks:hover {\n"
 "	border: 1px solid rgb(255, 70, 95);\n"
 "}\n"
-"QPushButton#btn_delete:pressed {\n"
+"QPushButton#btn_delete:pressed, #delete_all_tasks:pressed {\n"
 "   background-color: rgb(255, 70, 95);\n"
 "   border: 0px;\n"
 "   border-radius: 5px;\n"
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton#btn_add:hover, #btn_back:hover, \n"
-"#btn_edit:hover, #btn_back_2:hover, #btn_save:hover {\n"
+"#btn_edit:hover, #btn_back_2:hover, #btn_save:hove {\n"
 "	border: 3px solid rgb(33, 33, 33);\n"
 "}\n"
 "QPushButton#btn_add:pressed, #btn_back:hover, \n"
@@ -64,13 +64,13 @@ class Ui_MainWindow(object):
 "\n"
 "QTextEdit#textEdit_bodyNote, #lineEdit_Title {\n"
 "border: 0xp;\n"
-"}\n"
+""
+                        "}\n"
 "\n"
-"QPushButton#btn_saveChanges:hover {\n"
+"QPushButton#btn_saveChanges:hover, #btn_addTask:hover, #btn_calendar:hover, #btn_back_3:hover {\n"
 "	border: 1px solid rgb(231, 237, 155);\n"
 "}\n"
-"QPushButto"
-                        "n#btn_saveChanges:pressed {\n"
+"QPushButton#btn_saveChanges:pressed, #btn_addTask:pressed, #btn_calendar:pressed,  #btn_back_3:pressed {\n"
 "   background-color: rgb(207, 212, 144);\n"
 "   border: 1px solid rgb(207, 212, 144);\n"
 "}\n"
@@ -103,7 +103,8 @@ class Ui_MainWindow(object):
 "  }\n"
 "\n"
 "QScrollBar::handle:vertical:pressed {\n"
-"      background-color: rgb(33, 33, 33);\n"
+"      backgrou"
+                        "nd-color: rgb(33, 33, 33);\n"
 " }\n"
 "\n"
 "QScrollBar::sub-line:vertical {\n"
@@ -116,8 +117,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "\n"
-"/* RESET ARROW  vvvvvvvvvvvvvvvvvvvvvvvv"
-                        "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv       */\n"
+"/* RESET ARROW  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv       */\n"
 "            QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
 "                background: none;\n"
 "            }\n"
@@ -131,6 +131,7 @@ class Ui_MainWindow(object):
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget = QStackedWidget(self.centralwidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        self.stackedWidget.setMinimumSize(QSize(0, 40))
         self.allNotesPage = QWidget()
         self.allNotesPage.setObjectName(u"allNotesPage")
         self.verticalLayout = QVBoxLayout(self.allNotesPage)
@@ -182,6 +183,15 @@ class Ui_MainWindow(object):
         self.btn_search.setIcon(icon)
 
         self.horizontalLayout.addWidget(self.btn_search)
+
+        self.btn_calendar = QPushButton(self.header_allNotes)
+        self.btn_calendar.setObjectName(u"btn_calendar")
+        self.btn_calendar.setMinimumSize(QSize(27, 27))
+        icon1 = QIcon()
+        icon1.addFile(u":/svg/calendar_white_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_calendar.setIcon(icon1)
+
+        self.horizontalLayout.addWidget(self.btn_calendar)
 
 
         self.verticalLayout.addWidget(self.header_allNotes)
@@ -237,9 +247,9 @@ class Ui_MainWindow(object):
         self.btn_add.setMinimumSize(QSize(40, 40))
         self.btn_add.setMaximumSize(QSize(60, 40))
         self.btn_add.setStyleSheet(u"")
-        icon1 = QIcon()
-        icon1.addFile(u":/svg/plus_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_add.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/svg/plus_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_add.setIcon(icon2)
         self.btn_add.setIconSize(QSize(18, 18))
 
         self.horizontalLayout_5.addWidget(self.btn_add)
@@ -268,9 +278,9 @@ class Ui_MainWindow(object):
         self.btn_back.setObjectName(u"btn_back")
         self.btn_back.setMinimumSize(QSize(27, 27))
         self.btn_back.setStyleSheet(u"")
-        icon2 = QIcon()
-        icon2.addFile(u":/svg/back_arrow_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_back.setIcon(icon2)
+        icon3 = QIcon()
+        icon3.addFile(u":/svg/back_arrow_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_back.setIcon(icon3)
 
         self.horizontalLayout_2.addWidget(self.btn_back, 0, Qt.AlignLeft)
 
@@ -285,9 +295,9 @@ class Ui_MainWindow(object):
         self.btn_saveChanges.setObjectName(u"btn_saveChanges")
         self.btn_saveChanges.setMinimumSize(QSize(27, 27))
         self.btn_saveChanges.setStyleSheet(u"")
-        icon3 = QIcon()
-        icon3.addFile(u":/svg/checkYesDisabled_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_saveChanges.setIcon(icon3)
+        icon4 = QIcon()
+        icon4.addFile(u":/svg/checkYesDisabled_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_saveChanges.setIcon(icon4)
 
         self.horizontalLayout_4.addWidget(self.btn_saveChanges)
 
@@ -295,9 +305,9 @@ class Ui_MainWindow(object):
         self.btn_edit.setObjectName(u"btn_edit")
         self.btn_edit.setMinimumSize(QSize(27, 27))
         self.btn_edit.setStyleSheet(u"")
-        icon4 = QIcon()
-        icon4.addFile(u":/svg/edit_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_edit.setIcon(icon4)
+        icon5 = QIcon()
+        icon5.addFile(u":/svg/edit_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_edit.setIcon(icon5)
 
         self.horizontalLayout_4.addWidget(self.btn_edit)
 
@@ -331,6 +341,29 @@ class Ui_MainWindow(object):
         self.label_dateUpdate.setObjectName(u"label_dateUpdate")
 
         self.verticalLayout_2.addWidget(self.label_dateUpdate)
+
+        self.task = QFrame(self.notePage)
+        self.task.setObjectName(u"task")
+        self.task.setMinimumSize(QSize(0, 0))
+        self.task.setFrameShape(QFrame.StyledPanel)
+        self.task.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_8 = QHBoxLayout(self.task)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(1, -1, -1, -1)
+        self.label_task = QLabel(self.task)
+        self.label_task.setObjectName(u"label_task")
+
+        self.horizontalLayout_8.addWidget(self.label_task)
+
+        self.dateEdit = QDateEdit(self.task)
+        self.dateEdit.setObjectName(u"dateEdit")
+        self.dateEdit.setDateTime(QDateTime(QDate(2021, 1, 1), QTime(0, 0, 0)))
+        self.dateEdit.setCalendarPopup(True)
+
+        self.horizontalLayout_8.addWidget(self.dateEdit)
+
+
+        self.verticalLayout_2.addWidget(self.task, 0, Qt.AlignLeft)
 
         self.textEdit_bodyNote = QTextEdit(self.notePage)
         self.textEdit_bodyNote.setObjectName(u"textEdit_bodyNote")
@@ -373,7 +406,7 @@ class Ui_MainWindow(object):
         self.btn_back_2.setObjectName(u"btn_back_2")
         self.btn_back_2.setMinimumSize(QSize(27, 27))
         self.btn_back_2.setStyleSheet(u"")
-        self.btn_back_2.setIcon(icon2)
+        self.btn_back_2.setIcon(icon3)
 
         self.horizontalLayout_3.addWidget(self.btn_back_2, 0, Qt.AlignLeft)
 
@@ -401,7 +434,115 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.textEdit_bodyNote_2)
 
+        self.frame_2 = QFrame(self.addNotePage)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setMinimumSize(QSize(0, 0))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_9 = QHBoxLayout(self.frame_2)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.label_task_2 = QLabel(self.frame_2)
+        self.label_task_2.setObjectName(u"label_task_2")
+
+        self.horizontalLayout_9.addWidget(self.label_task_2)
+
+        self.dateEdit_2 = QDateEdit(self.frame_2)
+        self.dateEdit_2.setObjectName(u"dateEdit_2")
+        self.dateEdit_2.setDateTime(QDateTime(QDate(2021, 1, 1), QTime(0, 0, 0)))
+        self.dateEdit_2.setCalendarPopup(True)
+
+        self.horizontalLayout_9.addWidget(self.dateEdit_2)
+
+
+        self.verticalLayout_3.addWidget(self.frame_2, 0, Qt.AlignLeft)
+
         self.stackedWidget.addWidget(self.addNotePage)
+        self.calendarPage = QWidget()
+        self.calendarPage.setObjectName(u"calendarPage")
+        self.verticalLayout_4 = QVBoxLayout(self.calendarPage)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.calendar = QFrame(self.calendarPage)
+        self.calendar.setObjectName(u"calendar")
+        self.calendar.setMinimumSize(QSize(0, 170))
+        self.calendar.setMaximumSize(QSize(16777215, 170))
+        self.calendar.setFrameShape(QFrame.StyledPanel)
+        self.calendar.setFrameShadow(QFrame.Raised)
+        self.gridLayout_4 = QGridLayout(self.calendar)
+        self.gridLayout_4.setSpacing(0)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.calendarWidget = QCalendarWidget(self.calendar)
+        self.calendarWidget.setObjectName(u"calendarWidget")
+
+        self.gridLayout_4.addWidget(self.calendarWidget, 0, 0, 1, 1)
+
+
+        self.verticalLayout_4.addWidget(self.calendar)
+
+        self.add_task = QFrame(self.calendarPage)
+        self.add_task.setObjectName(u"add_task")
+        self.add_task.setMaximumSize(QSize(16777215, 100))
+        self.add_task.setFrameShape(QFrame.StyledPanel)
+        self.add_task.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.add_task)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.textEdit = QTextEdit(self.add_task)
+        self.textEdit.setObjectName(u"textEdit")
+
+        self.horizontalLayout_6.addWidget(self.textEdit)
+
+        self.btn_addTask = QPushButton(self.add_task)
+        self.btn_addTask.setObjectName(u"btn_addTask")
+        icon6 = QIcon()
+        icon6.addFile(u":/svg/checkYes_icon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_addTask.setIcon(icon6)
+        self.btn_addTask.setIconSize(QSize(20, 25))
+
+        self.horizontalLayout_6.addWidget(self.btn_addTask)
+
+
+        self.verticalLayout_4.addWidget(self.add_task)
+
+        self.allTasks = QFrame(self.calendarPage)
+        self.allTasks.setObjectName(u"allTasks")
+        self.allTasks.setFrameShape(QFrame.StyledPanel)
+        self.allTasks.setFrameShadow(QFrame.Raised)
+        self.gridLayout_5 = QGridLayout(self.allTasks)
+        self.gridLayout_5.setSpacing(0)
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.tableview_tasks = QTableView(self.allTasks)
+        self.tableview_tasks.setObjectName(u"tableview_tasks")
+
+        self.gridLayout_5.addWidget(self.tableview_tasks, 0, 0, 1, 1)
+
+
+        self.verticalLayout_4.addWidget(self.allTasks)
+
+        self.parameters = QFrame(self.calendarPage)
+        self.parameters.setObjectName(u"parameters")
+        self.parameters.setMinimumSize(QSize(0, 40))
+        self.parameters.setFrameShape(QFrame.StyledPanel)
+        self.parameters.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.parameters)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(-1, 1, -1, 1)
+        self.delete_all_tasks = QPushButton(self.parameters)
+        self.delete_all_tasks.setObjectName(u"delete_all_tasks")
+        self.delete_all_tasks.setMinimumSize(QSize(65, 30))
+
+        self.horizontalLayout_7.addWidget(self.delete_all_tasks, 0, Qt.AlignLeft)
+
+        self.btn_back_3 = QPushButton(self.parameters)
+        self.btn_back_3.setObjectName(u"btn_back_3")
+        self.btn_back_3.setMinimumSize(QSize(65, 30))
+
+        self.horizontalLayout_7.addWidget(self.btn_back_3, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_4.addWidget(self.parameters)
+
+        self.stackedWidget.addWidget(self.calendarPage)
 
         self.gridLayout.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -414,7 +555,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -427,6 +568,7 @@ class Ui_MainWindow(object):
         self.action_3.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u043a\u0440\u044b\u0442\u044c", None))
         self.label_Notes.setText(QCoreApplication.translate("MainWindow", u"Notes", None))
         self.btn_search.setText("")
+        self.btn_calendar.setText("")
         self.btn_add.setText("")
         self.btn_back.setText("")
         self.btn_saveChanges.setText("")
@@ -434,9 +576,14 @@ class Ui_MainWindow(object):
         self.lineEdit_Title.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Title", None))
         self.label_date.setText(QCoreApplication.translate("MainWindow", u"Date", None))
         self.label_dateUpdate.setText(QCoreApplication.translate("MainWindow", u"Last update: ", None))
+        self.label_task.setText(QCoreApplication.translate("MainWindow", u"Task", None))
         self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"DELETE", None))
         self.btn_back_2.setText("")
         self.btn_save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.lineEdit_Title_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Title", None))
+        self.label_task_2.setText(QCoreApplication.translate("MainWindow", u"Task", None))
+        self.btn_addTask.setText("")
+        self.delete_all_tasks.setText(QCoreApplication.translate("MainWindow", u"DELETE", None))
+        self.btn_back_3.setText(QCoreApplication.translate("MainWindow", u"BACK", None))
     # retranslateUi
 

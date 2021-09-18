@@ -70,6 +70,8 @@ class MainWindow(QMainWindow):
         self.ui.btn_add.clicked.connect(self.changePageToAddNote)
         self.ui.btn_back.clicked.connect(self.backFromNote)
         self.ui.btn_back_2.clicked.connect(self.backFromNewNote)
+        self.ui.btn_calendar.clicked.connect(self.changeToCalendarPage)
+        self.ui.btn_back_3.clicked.connect(self.changePageToAllNotes)
         
         # Connect signals with slots
         self.ui.lineEdit_search.textChanged.connect(self.searchNotes)
@@ -165,6 +167,11 @@ class MainWindow(QMainWindow):
         self.ui.stackedWidget.setCurrentWidget(self.ui.allNotesPage)
         self.cardviewModel.reSet()
         self.ui.tableView.verticalScrollBar().setValue(self.startScroll)
+
+    def changeToCalendarPage(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.calendarPage)
+        # self.ui.calendarWidget.setSelectedDate(today)
+        # model.update
 
     def searchNotes(self, text):
         """
