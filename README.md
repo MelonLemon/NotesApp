@@ -2,9 +2,6 @@
 Basic Notes App with cardview and changing size/number cards within resizing window.
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShotFull.png)
 
-This NotesApp heavily based on design by Amal ["A simple and lightweight note app"](https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app/attachments/3501130?mode=media)
-I re-design it, couldn't contact to Amal, don't know if that can be problem. If it is, I can redesign app completely as the main focus here was to build App with cardview and changing size/number cards within resizing window.
-
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot1.PNG)
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot2.PNG)
 
@@ -16,4 +13,7 @@ Notes are resizing with resizing the window. Width of note grows till you can pu
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot6.PNG)
 It has a "search" where it shows notes that has text in search box.  
 ![alt text](https://raw.githubusercontent.com/MelonLemon/NotesApp/master/ui/snapshots/snapShot5.PNG)
+
+This NotesApp heavily based on design by Amal ["A simple and lightweight note app"](https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app/attachments/3501130?mode=media)
+I re-design it, couldn't contact to Amal, don't know if that can be problem. If it is, I can redesign app completely as the main focus here was to build App with cardview and changing size/number cards within resizing window.
 
